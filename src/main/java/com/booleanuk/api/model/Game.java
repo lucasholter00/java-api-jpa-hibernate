@@ -11,25 +11,28 @@ import java.util.Objects;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name="users")
-public class User {
+@Table(name="games")
+public class Game {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column
-    private String email;
+    private String title;
 
     @Column
-    private String firstName;
+    private String genre;
 
     @Column
-    private String lastName;
+    private String publisher;
 
     @Column
-    private String username;
+    private String developer;
 
     @Column
-    private String phone;
+    private int releaseYear;
+
+    @Column
+    private boolean isEarlyAccess;
 
 }
